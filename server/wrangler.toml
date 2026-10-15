@@ -1,0 +1,21 @@
+name = "dolabim-ai"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Kullanılacak model. Değiştirmek için burayı düzenleyip yeniden yayınla,
+# uygulamayı güncellemek gerekmez.
+GEMINI_MODEL = "gemini-3.5-flash-lite"
+
+# Aynı yerden dakikada en fazla 20 istek (Cloudflare konum başına sayar).
+[[ratelimits]]
+name = "RATE"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 20
+  period = 60
+
+# Sırlar dosyaya yazılmaz, komutla eklenir:
+#   npx wrangler secret put GEMINI_API_KEY   (zorunlu)
+#   npx wrangler secret put APP_TOKEN        (isteğe bağlı, uygulama bunu başlıkta gönderir)

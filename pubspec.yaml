@@ -1,0 +1,25 @@
+name: dolabim
+description: Kıyafet dolabı stilisti. Fotoğrafla dolabını oluştur, hava durumuna ve etkinliğe göre kombin al.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.3.2
+  path_drawing: ^1.0.1
+  image_picker: ^1.2.4
+  path_provider: ^2.1.6
+  http: ^1.6.0
+  geolocator: ^14.1.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
